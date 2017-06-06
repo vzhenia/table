@@ -7,12 +7,10 @@ let base = new Airtable({apiKey: 'key4HmsyoHOgXYZVD'}).base('appqtqafTUSHyl5rt')
 
 
 class App extends Component {
-  constructor(){
-    super()
-    this.state = {
+
+  state = {
       message: ''
     }
-  }
 
   componentWillMount(){
     base('Table 1').find('recS5PfLTwafIL6Fq', (err, record) => {
@@ -36,7 +34,11 @@ class App extends Component {
       message = messageBit;
 
     }
-    txtArr = txtArr.sort((a,b) => {a[0] > b[0]});
+    txtArr = txtArr.sort((a,b) => {
+      let aa = a.replace(' ', '')
+      let bb = b.replace(' ', '')
+      return aa[0] > bb[0]
+    });
 
     const attributeColumnTxt = txtArr.join('; ');
 
