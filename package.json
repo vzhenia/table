@@ -5,8 +5,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "whatwg-fetch": "^2.0.3"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"
